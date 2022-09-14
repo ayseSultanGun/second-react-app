@@ -7,7 +7,6 @@ export default function Thesaurus() {
   let [results, setResults] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data[0]);
     setResults(response.data[0]);
   }
 
@@ -27,7 +26,7 @@ export default function Thesaurus() {
     <div className="thesaurus">
       <form onSubmit={search}>
         <input type="search" onChange={handleKeywordChange} />
-        <button className="btn btn-warning p-2 m-5">more like this!</button>
+        <button className="btn btn-warning p-2 m-5">seek!</button>
       </form>
 
       <Results results={results} />
